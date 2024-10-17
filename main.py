@@ -10,7 +10,7 @@ db = client["comet-db"]
 app = FastAPI()
 
 
-@app.get("/register", status_code=status.HTTP_200_OK)
+@app.post("/register", status_code=status.HTTP_200_OK)
 def register(name, password, profile_picture="default"):
   users = db["users"]
 
@@ -40,4 +40,4 @@ def register(name, password, profile_picture="default"):
 
 if __name__ == '__main__':
   import uvicorn
-  uvicorn.run(app)
+  uvicorn.run(app, reload=True)
