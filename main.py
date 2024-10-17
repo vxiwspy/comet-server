@@ -40,4 +40,4 @@ def register(name, password, profile_picture="default"):
 
 if __name__ == '__main__':
   import uvicorn
-  uvicorn.run(app, reload=True)
+  uvicorn.run(app)
